@@ -1,0 +1,2 @@
+/usr/bin/ar qc libpredict.a  CMakeFiles/predict_static.dir/orbit.c.o CMakeFiles/predict_static.dir/sun.c.o CMakeFiles/predict_static.dir/observer.c.o CMakeFiles/predict_static.dir/sdp4.c.o CMakeFiles/predict_static.dir/sgp4.c.o CMakeFiles/predict_static.dir/refraction.c.o CMakeFiles/predict_static.dir/unsorted.c.o CMakeFiles/predict_static.dir/julian_date.c.o CMakeFiles/predict_static.dir/moon.c.o
+/usr/bin/ranlib libpredict.a

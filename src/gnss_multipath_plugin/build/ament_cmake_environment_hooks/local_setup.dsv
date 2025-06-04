@@ -1,0 +1,4 @@
+source;share/gnss_multipath_plugin/environment/ament_prefix_path.sh
+source;share/gnss_multipath_plugin/environment/library_path.sh
+source;share/gnss_multipath_plugin/environment/path.sh
+source;share/gnss_multipath_plugin/environment/pythonpath.sh

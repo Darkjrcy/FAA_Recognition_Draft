@@ -1,0 +1,6 @@
+{
+  "package_name": "gnss_multipath_plugin",
+  "non_idl_tuples": [
+    "/home/kap/ros2_ws/src/gnss_multipath_plugin:msg/GNSSMultipathFix.msg"
+  ]
+}

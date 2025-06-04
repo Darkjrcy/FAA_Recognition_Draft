@@ -1,0 +1,1 @@
+/usr/bin/g++   -Wall -Werror -Wall -Werror -g  -rdynamic CMakeFiles/sun-t.dir/sun-t.cpp.o CMakeFiles/sun-t.dir/testcase_reader.cpp.o  -o sun-t   -L/home/kap/ros2_ws/src/gnss_multipath_plugin/build/libpredict/src  -Wl,-rpath,/home/kap/ros2_ws/src/gnss_multipath_plugin/build/libpredict/src ../src/libpredict.so.3.0.0 -lm 
