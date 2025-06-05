@@ -1,5 +1,6 @@
 import os
 import numpy as np
+import json
 
 # Use ROS2 libraries:
 from ament_index_python.packages import get_package_share_directory
@@ -12,34 +13,32 @@ from launch import LaunchDescription
 from launch.actions import OpaqueFunction
 from launch.substitutions import Command
 
-# Open the MATLAB file that contains the starting position and name of the Airplane:
-import scipy.io as spio
-import matlab.engine
 
 # Define a function to generate the robot info:
 def launch_setup(context, *args,**kwargs):
     
     # obtain the matlab_file_name from the arguments:
     math_file_name = LaunchConfiguration('mat_file').perform(context)
-    
-    """ Start the matlab loader"""
-    eng = matlab.engine.start_matlab()
+    # Change it to be a json filename:
+    json_file_name = math_file_name.replace('.mat', '.json')
     
 
     # Find the matlab file using the name:
     package_share_dir = get_package_share_directory('plane_bringup')
-    mat_file_path = os.path.join(package_share_dir, 'AirplaneCharacteristics', math_file_name)
-    s=eng.load(mat_file_path)
-    lib=spio.loadmat(mat_file_path)
-    
-    # Use the file to obtain the initial position and velocity:
-    pose_1 = s['Airplane']['pose']
-    rot_1= s['Airplane']['rot']
-    robot_name = s['Airplane']['name']
-    robot_imu = s['Airplane']['imu']
+    json_file_path = os.path.join(package_share_dir, 'AirplaneCharacteristics', json_file_name)
 
-    x_pos, y_pos, z_pos = TextSubstitution(text=str(pose_1[0][0])), TextSubstitution(text=str(pose_1[0][1])), TextSubstitution(text=str(pose_1[0][2]))
-    R_rot, P_rot, Y_rot = TextSubstitution(text=str(rot_1[0][0])), TextSubstitution(text=str(rot_1[0][1])), TextSubstitution(text=str(rot_1[0][2]))
+    # Get the information from the json file:
+    with open(json_file_path, 'r') as f:
+        data = json.load(f)
+    
+   # Extract data:
+    pose_1 = data['pose']
+    rot_1 = data['rot']
+    robot_name = data['robot_name']
+    robot_imu = data['robot_imu']
+
+    x_pos, y_pos, z_pos = TextSubstitution(text=str(pose_1[0])), TextSubstitution(text=str(pose_1[1])), TextSubstitution(text=str(pose_1[2]))
+    R_rot, P_rot, Y_rot = TextSubstitution(text=str(rot_1[0])), TextSubstitution(text=str(rot_1[1])), TextSubstitution(text=str(rot_1[2]))
 
     # Check if the Airplane needs to have vision sensoring or not:
     camera_value = LaunchConfiguration('camera').perform(context)
@@ -49,7 +48,7 @@ def launch_setup(context, *args,**kwargs):
     package_description = "plane_description"
     
     if camera_exists:
-        xacro_file = 'Airplane_with_Camera/main_plane.xacro'
+        xacro_file = 'Airplane_with_Camera/main_plane.xacro' 
     elif camera_360_exists:
         xacro_file = 'Airplane_with_360Camera/main_plane.xacro'
     else:
