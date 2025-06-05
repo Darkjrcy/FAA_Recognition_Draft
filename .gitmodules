@@ -1,0 +1,3 @@
+[submodule "src/libpredict"]
+	path = src/libpredict
+	url = https://github.com/Darkjrcy/libpredict
