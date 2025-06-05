@@ -25,15 +25,3 @@ gazebo-dev is used as a dependency to build custom Gazebo plugins and install th
 sudo apt update
 sudo apt install libgazebo11-dev
 ```
-### MATLAB Engine
-The MATLAB Engine API for Python is used to connect to MATLAB and retrieve aircraft information used by the airplane spawner in Gazebo.
-
-```bash
-# Linux:
-cd /usr/local/MATLAB/"Your_MATLAB_Version"/extern/engines/python
-python3 setup.py install
-
-# Windows:
-cd "C:\Program Files\MATLAB\Your_MATLAB_Version\extern\engines\python"
-python3 setup.py install
-```
