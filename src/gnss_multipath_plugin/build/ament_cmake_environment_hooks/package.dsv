@@ -1,4 +1,0 @@
-source;share/gnss_multipath_plugin/local_setup.bash
-source;share/gnss_multipath_plugin/local_setup.dsv
-source;share/gnss_multipath_plugin/local_setup.sh
-source;share/gnss_multipath_plugin/local_setup.zsh

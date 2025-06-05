@@ -1,1 +1,0 @@
-/usr/bin/g++   -Wall -Werror -Wall -Werror -g  -rdynamic CMakeFiles/aoslos-t.dir/aoslos-t.cpp.o CMakeFiles/aoslos-t.dir/testcase_reader.cpp.o  -o aoslos-t   -L/home/kap/ros2_ws/src/gnss_multipath_plugin/build/libpredict/src  -Wl,-rpath,/home/kap/ros2_ws/src/gnss_multipath_plugin/build/libpredict/src ../src/libpredict.so.3.0.0 -lm 
