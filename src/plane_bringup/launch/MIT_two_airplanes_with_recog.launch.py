@@ -13,6 +13,10 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
 
+    # Characteristics:
+    world = 'empty_world.world'
+
+
     # Define the frequency
     frequency = 10
 
@@ -59,7 +63,7 @@ def generate_launch_description():
             ])
         ]),
         launch_arguments={
-            'world': [os.path.join(get_package_share_directory('plane_bringup'), 'worlds', 'empty_world.world'), ''],
+            'world': [os.path.join(get_package_share_directory('plane_bringup'), 'worlds', world), ''],
             'camera' : 'true'
         }.items()
     )

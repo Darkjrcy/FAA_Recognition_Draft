@@ -12,6 +12,9 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
 
+    # Characteristics:
+    world = 'empty_world.world'
+
     # Get the absolute path of this launch file
     this_file_path = os.path.realpath(__file__)
     this_dir = os.path.dirname(this_file_path)
@@ -55,7 +58,7 @@ def generate_launch_description():
             ])
         ]),
         launch_arguments={
-            'world': [os.path.join(get_package_share_directory('plane_bringup'), 'worlds', 'empty_world.world'), ''],
+            'world': [os.path.join(get_package_share_directory('plane_bringup'), 'worlds', world), ''], # Change the world file
             'camera' : 'true'
         }.items()
     )
