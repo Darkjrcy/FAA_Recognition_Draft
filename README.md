@@ -55,3 +55,11 @@ bash setup.sh
 ## Generate New Worlds
 The process to generate new worlds for you Gazebo Simulation is presented in [World Generator](src/plane_bringup/README.md)
 
+
+***
+## Run the Detection Simulations
+The Repository contains two main detection simulations models:
+
+### One Camera Detection Simulation
+
+
