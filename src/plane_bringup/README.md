@@ -1,6 +1,3 @@
-# CRADA-architecture
-CRADA ARL-ERAU architecture
-
 # Adding a city to Gazebo
 ## 1. Generate the 3D model of the city
 There are several ways to generate cities inside Gazebo from OpenStreetMaps (OSM). Here is a simpler and fast way to generate these cities into a Gazebo world, to use them for simulations. The first step to add the OSM file into the Gazebo world, is to generate the city 3D model using blender (Steps: https://www.youtube.com/watch?v=ZsLMt3Ka8UA&t=700s) 
