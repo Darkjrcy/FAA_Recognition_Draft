@@ -12,6 +12,7 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
 
+    # Characteristics:
     world = 'empty_world.world'
     fog_density = 0.0
 
