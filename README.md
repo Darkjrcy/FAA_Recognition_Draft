@@ -1,4 +1,5 @@
 # FAA_Recognition_Draft
+***
 ## Dependencies
 The Gazebo Simulations of Detect and Avoid (DAA), focused on generating detection confidence levels under varying visual environmental factors (such as visual clutter, fog, and camera noise), require several Python libraries and ROS 2 dependencies:
 
@@ -24,4 +25,20 @@ gazebo-dev is used as a dependency to build custom Gazebo plugins and install th
 ```bash
 sudo apt update
 sudo apt install libgazebo11-dev
+```
+
+### Recursive Sub-modules
+The simulations used a customized version of the plugin [GPS Multipath Plugin](https://github.com/landwy/gnss_multipath_plugin) for Gazebo, redesigned to be added to any model and to calculate a velocity estimation. This plugin depends on [libpredict](https://github.com/la1k/libpredict). Both of these packages are added as recursive sub-modules to the repository.
+
+***
+## Installation 
+
+The installation process requires cloning the repository with its recursive sub-modules and running the `setup.sh` script to install additional large files into the `src` directory.
+
+### Steps:
+
+```bash
+git clone --recurse-submodules https://github.com/Darkjrcy/FAA_Recognition_Draft.git
+cd FAA_Recognition_Draft
+bash setup.sh
 ```
