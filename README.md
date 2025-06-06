@@ -27,8 +27,16 @@ sudo apt update
 sudo apt install libgazebo11-dev
 ```
 
+### Unzipping larger files:
+The Installation of the models used in the worlds downloads big zip files from Google Drive, gdown is required to accept the download when the setup.sh is running.
+```bash
+pip install gdown
+```
+
 ### Recursive Sub-modules
 The simulations used a customized version of the plugin [GPS Multipath Plugin](https://github.com/landwy/gnss_multipath_plugin) for Gazebo, redesigned to be added to any model and to calculate a velocity estimation. This plugin depends on [libpredict](https://github.com/la1k/libpredict). Both of these packages are added as recursive sub-modules to the repository.
+
+
 
 ***
 ## Installation 
