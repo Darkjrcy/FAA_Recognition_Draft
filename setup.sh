@@ -3,7 +3,7 @@ echo "==== Downloading models.zip from Google Drive ===="
 
 # Dowload and unzip the Models folder
 # Google Drive file ID: 1612k0ajAOZc07ogzQaVJj58sSxcUIGob
-MODELS_ID = "1612k0ajAOZc07ogzQaVJj58sSxcUIGob"
+MODELS_ID="1612k0ajAOZc07ogzQaVJj58sSxcUIGob"
 gdown --id ${MODELS_ID} -O models.zip
 
 echo "=== Unzipping the files into the models folder ==="
@@ -12,7 +12,7 @@ unzip -o models.zip -d src/plane_description/models/
 
 # Dowload and unzip the data YOLO folder
 # Google Drive file ID: 1chHuow8cOx5b5a7lb4I7q1iILFkzfIup
-DATA_ID = "1chHuow8cOx5b5a7lb4I7q1iILFkzfIup"
+DATA_ID="1chHuow8cOx5b5a7lb4I7q1iILFkzfIup"
 gdown --id ${DATA_ID} -O data.zip
 
 echo "=== Unzipping the files into the data folder ==="
