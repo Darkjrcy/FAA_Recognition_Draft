@@ -15,6 +15,8 @@ def generate_launch_description():
 
     # Characteristics:
     world = 'empty_world.world'
+    fog_density = 0.0
+    camera_noise_std = 0.05
 
 
     # Define the frequency
@@ -136,9 +138,9 @@ def generate_launch_description():
                     "airplane_name_in": airplanes[1],
                     "output_folder": new_folder_path,
                     "fog_type": "exponential",        # Verify the type in the world file in the scene branch
-                    "fog_density": 0.0,             # The sanme goes for the fog density
+                    "fog_density": fog_density,             # The sanme goes for the fog density
                     "camera_noise_type": "Gaussian",  # Check the noise type of the cameras in the Airplane gazebo section urdf
-                    "camera_noise_std": 0.05,         # Do the same for the standard deviatio
+                    "camera_noise_std": camera_noise_std,         # Do the same for the standard deviatio
                     "camera_resolution": "3776x2360", # Check the resultion in the urdf too
                     "clutter": "Hanscom_Air_Force_Base_Sourrandings", # Check the world file you are inputing
                     "Yolo_model": "Yolo_m", # Define the yolo model used.

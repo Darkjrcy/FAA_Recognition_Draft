@@ -12,8 +12,8 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
 
-    # Characteristics:
     world = 'empty_world.world'
+    fog_density = 0.0
 
     # Get the absolute path of this launch file
     this_file_path = os.path.realpath(__file__)
@@ -123,7 +123,7 @@ def generate_launch_description():
                     "airplane_name_in": airplanes[1],
                     "output_folder": new_folder_path,
                     "fog_type": "exponential",        # Verify the type in the world file in the scene branch
-                    "fog_density": 0.0115,             # The sanme goes for the fog density
+                    "fog_density": fog_density,             # The sanme goes for the fog density
                     "camera_resolution": "3776x2360", # Check the resultion in the urdf too
                     "Yolo_model": "Yolo_m", # Define the yolo model used.
                 }]
