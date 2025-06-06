@@ -61,8 +61,8 @@ The process to generate new worlds for you Gazebo Simulation is presented in [Wo
 The Repository contains two main detection simulations models:
 
 ### One Camera Detection Simulation
-he first simulation uses a single camera to detect airplanes with YOLO, using the closest approach point from the MIT Detect and Avoid (DAA) system. The results are saved in DATA/MIT_One_Camera_Recognition. Inside this directory, the Test folder contains two detection result files:
+he first simulation uses a single camera to detect airplanes with YOLO, using the closest approach point from the MIT Detect and Avoid (DAA) trajectories. The results are saved in DATA/MIT_One_Camera_Recognition. Inside this directory, the Test folder contains two detection result files:
 
--Detection_events.csv: a description of detection events
--Detection_process.csv: simultaneous detection process result
+* Detection_events.csv: a description of detection events
+* Detection_process.csv: simultaneous detection process result
 
