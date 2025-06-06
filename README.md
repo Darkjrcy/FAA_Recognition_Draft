@@ -50,3 +50,8 @@ git clone --recurse-submodules https://github.com/Darkjrcy/FAA_Recognition_Draft
 cd FAA_Recognition_Draft
 bash setup.sh
 ```
+
+***
+## Generate New Worlds
+The process to generate new worlds for you Gazebo Simulation is presented in [World Generator](src/plane_bringup/README.md)
+
