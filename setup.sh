@@ -2,6 +2,9 @@
 echo "==== Downloading models.zip from Google Drive ===="
 
 # Dowload and unzip the Models folder
+# Create the folder (if it already exists, it's fine)
+mkdir -p src/plane_description/models
+
 # Google Drive file ID: 1612k0ajAOZc07ogzQaVJj58sSxcUIGob
 MODELS_ID="1612k0ajAOZc07ogzQaVJj58sSxcUIGob"
 gdown --id ${MODELS_ID} -O models.zip
